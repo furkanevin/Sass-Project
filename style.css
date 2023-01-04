@@ -24,6 +24,7 @@ header nav {
 header nav a {
   text-decoration: none;
   white-space: nowrap;
+  color: #252a34;
 }
 header nav img {
   width: 100px;
@@ -39,16 +40,86 @@ header #nav-2 {
 }
 
 .hero {
-  padding: 100px;
-  height: 90vh;
+  padding: 50px 100px;
   background: linear-gradient(rgb(214, 214, 214) 40%, #eaeaea 40%);
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+.hero #slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero #slogan h1 {
+  font-family: "Inter", sans-serif;
   font-size: 60px;
   text-align: center;
-  width: 400px;
+  width: 600px;
+}
+.hero #slogan h1 span {
+  font-family: "Times New Roman", Times, serif;
 }
 .hero #slogan p {
   text-align: center;
   width: 400px;
+  margin-top: 5px;
+}
+.hero #slogan img {
+  width: 200px;
+  mix-blend-mode: darken;
+  margin-top: 80px;
+}
+.hero #slogan h2 {
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  margin-top: 70px;
+}
+.hero #slogan h2 span {
+  font-family: "Times New Roman", Times, serif;
+}
+.hero #slogan #sec-p {
+  margin-top: 80px;
+}
+.hero #slogan button {
+  margin-top: 80px;
+  background-color: #e50000;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 700;
+  color: #eaeaea;
+  padding: 20px 100px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.hero #slogan button:hover {
+  background-color: rgba(79, 0, 0, 0.9843137255);
+  transition: all 0.5s;
+}
+.hero #banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.hero #banner #main-img {
+  width: 900px;
+}
+.hero #banner #track-img {
+  width: 500px;
+  mix-blend-mode: darken;
+}
+.hero #banner p {
+  font-size: 17px;
+  font-weight: 500;
+  width: 500px;
+  text-align: center;
+}
+
+main #cars-section .cars-card {
+  width: 400px;
+}
+main #cars-section .cars-card img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
