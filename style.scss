@@ -214,6 +214,7 @@ main {
       color: white;
       border: 1px solid white;
       padding: 15px 60px;
+      cursor: pointer;
     }
   }
   #interior {
@@ -224,10 +225,10 @@ main {
     background-size: cover;
   }
   #exterior {
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.5), black),
-      url(/images/exterior.jpg);
-    background-size: cover;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.47), black),
+      url(/images/exterior-4.jpg);
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 }
