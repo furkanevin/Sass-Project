@@ -12,14 +12,11 @@ $font-second: 'Inter', sans-serif;
     @content;
   }
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.blend {
-  mix-blend-mode: darken;
 }
 
 body {
@@ -29,19 +26,30 @@ body {
   overflow-x: hidden;
 }
 
+.blend {
+  mix-blend-mode: darken;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   padding: 10px 50px;
-
+  @include mobile {
+    padding: 5px;
+  }
   nav {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: color 0.5s;
     a {
       text-decoration: none;
       white-space: nowrap;
       color: $text-color;
+      &:hover {
+        color: #4f0000fb;
+        transition: all 0.5s;
+      }
     }
     img {
       width: 100px;
@@ -57,9 +65,12 @@ header {
   }
   #nav-2 {
     font-size: 13px;
+    @include mobile {
+      display: none;
+    }
   }
 }
-
+// HERO START
 .hero {
   padding: 50px 100px;
   background: linear-gradient(rgb(214, 214, 214) 40%, $background 40%);
@@ -80,6 +91,9 @@ header {
       font-size: 60px;
       text-align: center;
       width: 600px;
+      @include mobile {
+        font-size: 50px;
+      }
       span {
         font-family: 'Times New Roman', Times, serif;
       }
@@ -92,12 +106,13 @@ header {
     img {
       width: 200px;
       mix-blend-mode: darken;
-      margin-top: 80px;
+      margin-top: 70px;
     }
     h2 {
       font-size: 40px;
       font-family: $font-second;
-      margin-top: 70px;
+      margin-top: 120px;
+      white-space: nowrap;
       span {
         font-family: 'Times New Roman', Times, serif;
       }
@@ -129,6 +144,10 @@ header {
     gap: 30px;
     #main-img {
       width: 900px;
+      @include mobile {
+        margin-top: 40px;
+        width: 500px;
+      }
     }
     #track-img {
       width: 500px;
@@ -142,7 +161,7 @@ header {
     }
   }
 }
-
+// HERO END
 main {
   h1 {
     text-align: center;
@@ -164,6 +183,10 @@ main {
       display: flex;
       justify-content: space-around;
       gap: 30px;
+      @include mobile {
+        flex-direction: column;
+        justify-content: none;
+      }
       &-card {
         display: flex;
         flex-direction: column;
@@ -215,6 +238,15 @@ main {
       border: 1px solid white;
       padding: 15px 60px;
       cursor: pointer;
+      transition: all 0.5s;
+      font-weight: 600;
+      letter-spacing: 3px;
+      font-family: $font-main;
+      &:hover {
+        background-color: white;
+        color: black;
+        transition: all 0.5s;
+      }
     }
   }
   #interior {
@@ -230,5 +262,24 @@ main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+}
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 90px;
+  text-align: justify;
+  padding: 120px;
+  @include mobile {
+    padding: 20px;
+  }
+  img {
+    width: 200px;
+  }
+  section {
+    width: 300px;
   }
 }
